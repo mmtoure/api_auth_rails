@@ -35,3 +35,24 @@ Once done, Now
 - rails s
 
 p.s If you are not using RVM yet I would strongly recommend doing so!
+
+## Creation du projet
+
+rails new auth_api_rails --api --database=postgresql -T
+
+## Configuration Cors
+
+- Configure CORS in config/initializers/cors.rb:
+- # config/initializers/cors.rb
+- Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+  origins 'http://localhost:3000'
+  resource(
+  '\*',
+  headers: :any,
+  expose: ['access-token', 'expiry', 'token-type', 'Authorization'],
+  methods: [:get, :patch, :put, :delete, :post, :options, :show]
+  )
+  end
+  end
+
