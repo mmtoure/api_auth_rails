@@ -55,4 +55,8 @@ rails new auth_api_rails --api --database=postgresql -T
   )
   end
   end
+  ## Add the needed Gems
+  -- gem 'devise'
+  -- gem 'devise-jwt'
+  -- gem 'jsonapi-serializer'
 
