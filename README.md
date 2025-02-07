@@ -59,4 +59,9 @@ rails new auth_api_rails --api --database=postgresql -T
   - gem 'devise'
   - gem 'devise-jwt'
   - gem 'jsonapi-serializer'
+- bundle install
+  ## Configure Devise
+  - rails generate devise:install
+  - config/environments/development.rb
+    - config.action_mailer.default_url_options = { host: 'localhost', port: 4000 }
 
