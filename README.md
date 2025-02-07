@@ -5,11 +5,11 @@ application up and running.
 
 Things you may want to cover:
 
-# Ruby version
+## Ruby version
 
 -ruby -v
 
-# Make sure Rails is installed
+## Make sure Rails is installed
 
 -rails -v
 
@@ -17,20 +17,20 @@ If you see Ruby and Rails version then you are good to start, other wise Setup R
 
 Once done, Now
 
-# Clone respected git repository
+## Clone respected git repository
 
 - git clone https://github.com/martynbiz/human_services_finder.git
 
-# Install all dependencies
+## Install all dependencies
 
 - bundle install
 
-# Create db and migrate schema
+## Create db and migrate schema
 
 - rake db:create
 - rake db:migrate
 
-# Now run your application
+## Now run your application
 
 - rails s
 
