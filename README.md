@@ -16,7 +16,7 @@ Things you may want to cover:
 
 Clone respected git repository
 
-git clone https://github.com/martynbiz/human_services_finder.git
+https://github.com/mmtoure/api_auth_rails.git
 Install all dependencies
 
 bundle install
