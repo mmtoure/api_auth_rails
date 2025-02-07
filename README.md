@@ -5,20 +5,27 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+- Ruby version
+  ruby -v
+  Make sure Rails is installed
 
-* System dependencies
+  rails -v
+  If you see Ruby and Rails version then you are good to start, other wise Setup Ruby On Rails on Ubuntu
 
-* Configuration
+  Once done, Now
 
-* Database creation
+Clone respected git repository
 
-* Database initialization
+git clone https://github.com/martynbiz/human_services_finder.git
+Install all dependencies
 
-* How to run the test suite
+bundle install
+Create db and migrate schema
 
-* Services (job queues, cache servers, search engines, etc.)
+rake db:create
+rake db:migrate
+Now run your application
 
-* Deployment instructions
+rails s
 
-* ...
+p.s If you are not using RVM yet I would strongly recommend doing so!
