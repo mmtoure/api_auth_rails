@@ -2,11 +2,12 @@ class Users::SessionsController < Devise::SessionsController
   respond_to :json
   private
   def respond_with(current_user, _opts = {})
+    @token = request.env["warden-jwt_auth.token"]
+    headers["Authorization"] = @token
     render json: {
-      status: {
-        code: 200, message: "Logged in successfully.",
-        data: { user: UserSerializer.new(current_user).serializable_hash[:data][:attributes] }
-      }
+      status: { code: 200, message: "Signed up successfully." },
+      token: @token,
+      user: UserSerializer.new(current_user).serializable_hash[:data][:attributes]
     }, status: :ok
   end
   def respond_to_on_destroy
