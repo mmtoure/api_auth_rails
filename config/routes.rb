@@ -11,4 +11,6 @@ Rails.application.routes.draw do
     confirmations: "users/confirmations"
   }
   get "/me", to: "users/users#index"
+
+  resources :products
 end
